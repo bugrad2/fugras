@@ -117,23 +117,21 @@ body {
 }
 
 .side-note {
-  position: absolute;
-  top: 22px;
-  right: 22px;
-  z-index: 1;
   margin: 0;
-  max-width: 16ch;
-  padding: 0.7rem 0.95rem;
-  border: 1px solid rgba(142, 240, 255, 0.22);
-  border-radius: 999px;
-  background: rgba(8, 12, 24, 0.72);
-  color: #d7f6ff;
-  font-size: 0.78rem;
+  max-width: 12ch;
+  text-align: center;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(3.1rem, 9vw, 7.4rem);
+  line-height: 0.9;
   font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.22);
-  backdrop-filter: blur(10px);
+  letter-spacing: -0.05em;
+  text-wrap: balance;
+  text-shadow: 0 10px 40px rgba(0, 0, 0, 0.32);
+  background: linear-gradient(135deg, #ffffff 0%, #ffe2b4 35%, #ff8cb1 72%, #8ef0ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 18px rgba(255, 255, 255, 0.08));
 }
 
 .caption {
@@ -153,20 +151,14 @@ body {
 
 .message {
   margin: 0;
-  max-width: 11ch;
+  max-width: 20ch;
   text-align: center;
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(2.6rem, 8vw, 6.7rem);
-  line-height: 0.92;
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  text-wrap: balance;
-  text-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(135deg, #ffffff 0%, #dbe7ff 35%, #8ef0ff 68%, #f7b267 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: glow 6s ease-in-out infinite alternate;
+  font-size: clamp(1rem, 2vw, 1.45rem);
+  line-height: 1.65;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: rgba(245, 247, 255, 0.68);
+  animation: fade 6s ease-in-out infinite alternate;
 }
 
 .quote-mark {
@@ -206,6 +198,15 @@ body {
   }
 }
 
+@keyframes fade {
+  from {
+    opacity: 0.62;
+  }
+  to {
+    opacity: 0.92;
+  }
+}
+
 @media (max-width: 640px) {
   body {
     overflow: auto;
@@ -217,13 +218,6 @@ body {
 
   .card {
     border-radius: 24px;
-  }
-
-  .side-note {
-    top: 18px;
-    right: 18px;
-    max-width: 13ch;
-    font-size: 0.7rem;
   }
 
   .caption {

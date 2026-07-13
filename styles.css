@@ -118,16 +118,17 @@ body {
 
 .side-note {
   margin: 0;
-  max-width: 12ch;
+  max-width: 10ch;
+  margin-bottom: 18px;
   text-align: center;
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(3.1rem, 9vw, 7.4rem);
-  line-height: 0.9;
+  font-size: clamp(4.8rem, 13vw, 10rem);
+  line-height: 0.84;
   font-weight: 700;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.07em;
   text-wrap: balance;
   text-shadow: 0 10px 40px rgba(0, 0, 0, 0.32);
-  background: linear-gradient(135deg, #ffffff 0%, #ffe2b4 35%, #ff8cb1 72%, #8ef0ff 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #f1f5ff 26%, #ffe2b4 56%, #8ef0ff 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -151,10 +152,10 @@ body {
 
 .message {
   margin: 0;
-  max-width: 20ch;
+  max-width: 24ch;
   text-align: center;
-  font-size: clamp(1rem, 2vw, 1.45rem);
-  line-height: 1.65;
+  font-size: clamp(0.9rem, 1.6vw, 1.15rem);
+  line-height: 1.8;
   font-weight: 500;
   letter-spacing: 0.02em;
   color: rgba(245, 247, 255, 0.68);
@@ -218,6 +219,11 @@ body {
 
   .card {
     border-radius: 24px;
+  }
+
+  .side-note {
+    max-width: 7ch;
+    font-size: clamp(3.5rem, 18vw, 6.6rem);
   }
 
   .caption {
